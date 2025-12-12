@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Ad Sales | Unlimited Commission Career</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/TitanBusinessPros/Game-sales/raw/main/Gamesales-favicon.png">
     <style>
         /* ===== RESET & BASE STYLES ===== */
         * {
@@ -25,6 +26,7 @@
                 radial-gradient(circle at 10% 20%, rgba(28, 58, 173, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(200, 80, 192, 0.1) 0%, transparent 20%);
             color: #f0f0f0;
+            text-align: center; /* Center all text */
         }
 
         .container {
@@ -61,7 +63,8 @@
             content: '';
             position: absolute;
             bottom: -10px;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 80px;
             height: 4px;
             background: linear-gradient(90deg, #ff0080, #00d0ff);
@@ -76,6 +79,9 @@
         p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         a {
@@ -103,7 +109,6 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 0, 128, 0.3);
-            text-align: center;
         }
 
         .btn:hover {
@@ -128,6 +133,9 @@
             padding: 60px;
             margin: 40px 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* ===== HEADER & HERO ===== */
@@ -174,26 +182,32 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 0;
-            background-color: rgba(10, 10, 26, 0.9);
+            padding: 15px 0;
+            background-color: rgba(10, 10, 26, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
 
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #ff0080, #00d0ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
         }
 
         .nav-links {
@@ -299,6 +313,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
 
         .platform-card:hover {
@@ -339,6 +354,7 @@
             padding: 25px;
             border-radius: 10px;
             border-left: 4px solid #00d0ff;
+            text-align: center;
         }
 
         .task-item:nth-child(2) {
@@ -359,6 +375,37 @@
             color: #00d0ff;
         }
 
+        /* ===== BULLETED LIST STYLES ===== */
+        .centered-bullet-list {
+            text-align: center;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0;
+        }
+        
+        .centered-bullet-list ul {
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+        
+        .centered-bullet-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .centered-bullet-list li:before {
+            content: "•";
+            color: #00d0ff;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -15px;
+            top: -2px;
+        }
+
         /* ===== SUCCESS STORY ===== */
         .success-story {
             background: linear-gradient(135deg, rgba(0, 208, 255, 0.1), rgba(138, 43, 226, 0.1));
@@ -367,6 +414,10 @@
             margin-top: 40px;
             position: relative;
             overflow: hidden;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         .success-story:before {
@@ -395,6 +446,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .support-card {
@@ -415,6 +469,7 @@
             background-color: rgba(5, 5, 15, 0.95);
             padding: 60px 0 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
 
         .footer-content {
@@ -422,6 +477,13 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-section {
+            text-align: center;
         }
 
         .footer-logo {
@@ -442,6 +504,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .contact-info i {
@@ -450,12 +513,32 @@
             width: 20px;
         }
 
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-section ul li i {
+            margin-right: 10px;
+            color: #00d0ff;
+        }
+
         .copyright {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #888;
             font-size: 0.9rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
@@ -479,11 +562,19 @@
             .daily-tasks, .support-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
             .navbar {
-                padding: 15px 0;
+                padding: 10px 0;
+            }
+            
+            .logo-img {
+                height: 40px;
             }
             
             .nav-links {
@@ -525,6 +616,10 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+            
+            .centered-bullet-list ul {
+                padding-left: 15px;
+            }
         }
     </style>
     <!-- Font Awesome Icons -->
@@ -533,8 +628,10 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">GAME AD SALES</div>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="https://github.com/TitanBusinessPros/Game-sales/raw/main/Gamesales-logo.png" alt="Game Ad Sales Logo" class="logo-img">
+            </div>
             <button class="mobile-menu-btn" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -652,7 +749,7 @@
                     <div class="platform-content">
                         <h3>Fresno, CA</h3>
                         <p>A rapidly growing platform in California's Central Valley with diverse gaming options.</p>
-                        <a href="#" class="platform-link">Coming Soon →</a>
+                        <a href="https://www.fresno.games" target="_blank" class="platform-link">Visit Fresno.games →</a>
                     </div>
                 </div>
                 <div class="platform-card">
@@ -662,7 +759,7 @@
                     <div class="platform-content">
                         <h3>Honolulu, HI</h3>
                         <p>Island-themed gaming platform with unique local content and engaged players.</p>
-                        <a href="#" class="platform-link">Launching Q3 →</a>
+                        <a href="https://www.honolulu.games" target="_blank" class="platform-link">Visit Honolulu.games →</a>
                     </div>
                 </div>
             </div>
@@ -692,14 +789,18 @@
             <div class="section-light">
                 <h3>A DAY IN THE LIFE OF A SALES PARTNER</h3>
                 <p>Your home office becomes your command center. A successful day includes:</p>
-                <ul style="margin-left: 20px; margin-bottom: 20px;">
-                    <li>Making 30+ targeted cold calls to local businesses</li>
-                    <li>Sending personalized email campaigns to prospects</li>
-                    <li>Connecting with business owners on LinkedIn and Facebook</li>
-                    <li>Conducting video calls to demonstrate the platform</li>
-                    <li>Meticulously tracking all activity in Google Sheets</li>
-                    <li>Following up with warm leads to close deals</li>
-                </ul>
+                
+                <div class="centered-bullet-list">
+                    <ul>
+                        <li>Making 30+ targeted cold calls to local businesses</li>
+                        <li>Sending personalized email campaigns to prospects</li>
+                        <li>Connecting with business owners on LinkedIn and Facebook</li>
+                        <li>Conducting video calls to demonstrate the platform</li>
+                        <li>Meticulously tracking all activity in Google Sheets</li>
+                        <li>Following up with warm leads to close deals</li>
+                    </ul>
+                </div>
+                
                 <p><strong>This role is perfect for self-starters who excel at communication, persistence, and closing.</strong> All new partners begin with a 90-day probation period to ensure mutual fit.</p>
             </div>
         </section>
@@ -721,7 +822,7 @@
                 </div>
             </div>
             
-            <div class="section-light" style="text-align: center;">
+            <div class="section-light">
                 <h3>READY TO LEVEL UP YOUR EARNINGS?</h3>
                 <p>If you're a sales professional with a hunter's mentality, exceptional communication skills, and the drive to build an unlimited income, we want to talk to you.</p>
                 <a href="#contact" class="btn btn-large" style="margin-top: 20px;">APPLY FOR YOUR TERRITORY TODAY</a>
@@ -733,13 +834,13 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div>
-                    <div class="footer-logo">GAME AD SALES</div>
+                <div class="footer-section">
+                    <img src="https://github.com/TitanBusinessPros/Game-sales/raw/main/Gamesales-logo.png" alt="Game Ad Sales Logo" style="height: 60px; margin-bottom: 20px;">
                     <p>We're building the future of localized advertising through video game platforms. Join our team of elite Sales Partners and earn what you're truly worth.</p>
                     <p><em>This is a 100% commission-based, independent contractor position.</em></p>
                 </div>
                 
-                <div>
+                <div class="footer-section">
                     <h3>Contact Us</h3>
                     <div class="contact-info">
                         <div><i class="fas fa-phone"></i> <strong>Phone:</strong> 405-998-7979</div>
@@ -748,9 +849,9 @@
                     </div>
                 </div>
                 
-                <div>
+                <div class="footer-section">
                     <h3>Territories Available</h3>
-                    <ul style="list-style: none;">
+                    <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Tulsa, OK</li>
                         <li><i class="fas fa-map-marker-alt"></i> Fresno, CA</li>
                         <li><i class="fas fa-map-marker-alt"></i> Honolulu, HI</li>
